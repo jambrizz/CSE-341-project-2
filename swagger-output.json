@@ -2,13 +2,14 @@
   "swagger": "2.0",
   "info": {
     "title": "Clients API",
-    "description": "This is the list of clients for the store",
+    "description": "This is the database for a movie store",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/clients/": {
