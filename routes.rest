@@ -114,4 +114,120 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/orders/634b8ce1caec643b5c8dc59a HTTP/1.1
 
+
 //production
+
+//clients
+
+### 
+GET https://cse-341-project2-week5.onrender.com/clients
+
+###
+GET https://cse-341-project2-week5.onrender.com/clients/634a4ff6adf6d980eeac4456
+
+###
+POST https://cse-341-project2-week5.onrender.com/clients HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Tim",
+    "lastName": "Taylor",
+    "email": "timbo@gmail.com",
+    "telephone": "310-555-1123",
+    "address1": "7723 1st Ave",
+    "address2": "",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipcode": "90001"
+}
+
+###
+PUT https://cse-341-project2-week5.onrender.com/clients/634a4ff6adf6d980eeac4456 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "John",
+    "lastName": "Smith",
+    "email": "smith.j@gmail.com",
+    "telephone": "818-909-1234",
+    "address1": "2334 Elk Drive",
+    "address2": "#4",
+    "city": "Reseda",
+    "state": "CA",
+    "zipcode": "93049"
+}
+
+### 
+DELETE https://cse-341-project2-week5.onrender.com/clients/634a5232adf6d980eeac4458 HTTP/1.1
+
+
+//Inventory
+
+###
+GET https://cse-341-project2-week5.onrender.com/inventory
+
+###
+GET https://cse-341-project2-week5.onrender.com/inventory/634b65126e679c93466afd51
+
+### 
+POST https://cse-341-project2-week5.onrender.com/inventory HTTP/1.1
+Content-Type: application/json 
+
+{
+  "productName": "Star Wars: A New Hope",
+  "sku": "769-904",
+  "genre": "Science Fiction",
+  "price": "29.99",
+  "quantity": "15"
+}
+
+###
+PUT https://cse-341-project2-week5.onrender.com/inventory/634b65126e679c93466afd51 HTTP/1.1
+Content-Type: application/json
+
+{
+  "productName": "The Hobbit: The Battle of the Five Armies",
+  "sku": "385-727",
+  "genre": "Fantasy Adventure",
+  "price": "27.99",
+  "quantity": "21"
+}
+
+###
+DELETE https://cse-341-project2-week5.onrender.com/inventory/634b95ebf51ed18d6235c165 HTTP/1.1
+
+
+//Orders
+
+###
+GET https://cse-341-project2-week5.onrender.com/orders
+
+### 
+GET https://cse-341-project2-week5.onrender.com/orders/634b8218f51ed18d6235c162
+
+###
+POST https://cse-341-project2-week5.onrender.com/orders HTTP/1.1
+Content-Type: application/json 
+
+{
+  "clienId": "634a4ff6adf6d980eeac4456",
+  "sku": "354-777",
+  "price": "27.99",
+  "quantity": "2",
+  "total": "55.98"
+}
+
+###
+PUT https://cse-341-project2-week5.onrender.com/orders/634b8218f51ed18d6235c162 HTTP/1.1
+Content-Type: application/json
+
+{
+  "clienId": "634a4ff6adf6d980eeac4456",
+  "sku": "874-561",
+  "price": "19.99",
+  "quantity": "3",
+  "total": "59.97"
+}
+
+###
+DELETE https://cse-341-project2-week5.onrender.com/orders/634b8218f51ed18d6235c162 HTTP/1.1

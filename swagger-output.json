@@ -5,11 +5,10 @@
     "description": "This is the list of clients for the store",
     "version": "1.0.0"
   },
-  "host": "",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "http"
   ],
   "paths": {
     "/clients/": {
