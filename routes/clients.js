@@ -13,7 +13,7 @@ const clientsController = require('../controllers/clients');
 router.get('/', clientsController.getAllClients);
 
 //Get an individual client
-router.get('/:id', clientsController.getSingleClient);
+router.get('/:email', clientsController.getSingleClient);
 
 //Post a new client
 router.post('/', clientsController.createNewClient);

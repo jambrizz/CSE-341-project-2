@@ -5,20 +5,17 @@
 GET http://localhost:3000/clients
 
 ###
-GET http://localhost:3000/clients/634a4ff6adf6d980eeac4456
-
-###
-GET http://localhost:3000/clients/634a5232adf6d980eeac4458
+GET http://localhost:3000/clients/brad.taylor@gmail.com
 
 ### 
 POST http://localhost:3000/clients HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Tim",
+    "firstName": "Mark",
     "lastName": "Taylor",
-    "email": "timbo@gmail.com",
-    "telephone": "310-555-1123",
+    "email": "markk.taylor@gmail.com",
+    "telephone": "1112223333",
     "address1": "7723 1st Ave",
     "address2": "",
     "city": "Los Angeles",
@@ -31,10 +28,10 @@ PUT http://localhost:3000/clients/634a4ff6adf6d980eeac4456 HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "Johnny",
+  "firstName": "John",
     "lastName": "Smith",
     "email": "j.smith@gmail.com",
-    "telephone": "818-987-4412",
+    "telephone": "8189874412",
     "address1": "124 Sycamore Drive",
     "address2": "",
     "city": "Reseda",
@@ -43,14 +40,14 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/clients/634b2f5ea42cea3ce3f21e68 HTTP/1.1
+DELETE http://localhost:3000/clients/635cdfba7c25ab671b51eb5d HTTP/1.1
 
 //Inventory
 ### 
 GET http://localhost:3000/inventory
 
 ### 
-GET http://localhost:3000/inventory/634b63676e679c93466afd4e
+GET http://localhost:3000/inventory/954147
 
 ### 
 POST http://localhost:3000/inventory HTTP/1.1
@@ -58,26 +55,26 @@ Content-Type: application/json
 
 {
   "productName": "Star Wars: A New Hope",
-  "sku": "769-904",
-  "genre": "Science Fiction",
+  "sku": "769904",
+  "genre": "Sci-Fi",
   "price": "29.99",
   "quantity": "15"
 }
 
 ### 
-PUT http://localhost:3000/inventory/634b60c96e679c93466afd4c HTTP/1.1
+PUT http://localhost:3000/inventory/634b63046e679c93466afd4d HTTP/1.1
 Content-Type: application/json
 
 {
-  "productName": "The Lord of the Rings: The Fellowship of the Ring",
-  "sku": "874-561",
-  "genre": "Fantasy Adventure",
-  "price": "19.99",
-  "quantity": "10"
+  "productName": "The Lord of the Rings: The Two Towers",
+  "sku": "",
+  "genre": "Sci-Fi",
+  "price": "24.99",
+  "quantity": "12"
 }
 
 ###
-DELETE http://localhost:3000/inventory/634b7b004a37eed3547dd31a HTTP/1.1
+DELETE http://localhost:3000/inventory/634b63046e679c93466afd4d HTTP/1.1
 
 //Orders
 
@@ -92,30 +89,31 @@ POST http://localhost:3000/orders HTTP/1.1
 Content-Type: application/json 
 
 {
-  "clienId": "634a5232adf6d980eeac4458",
-  "sku": "354-777",
+  "clientId": "634a4ff6adf6d980eeac4456",
+  "sku": "354777",
   "price": "27.99",
   "quantity": "2",
   "total": "55.98"
 }
 
 ### 
-PUT http://localhost:3000/orders/634b8ce1caec643b5c8dc59a HTTP/1.1 
+PUT http://localhost:3000/orders/636215dad4c4b20886124386 HTTP/1.1
 Content-Type: application/json
 
 {
-  "clienId": "634a5232adf6d980eeac4458",
-  "sku": "354-777",
+  "clientId": "634a5232adf6d980eeac4458",
+  "sku": "354777",
   "price": "27.99",
   "quantity": "3",
   "total": "83.97"
 }
 
 ###
-DELETE http://localhost:3000/orders/634b8ce1caec643b5c8dc59a HTTP/1.1
+DELETE http://localhost:3000/orders/636215dad4c4b20886124386 HTTP/1.1
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //production
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //clients
 
@@ -123,7 +121,8 @@ DELETE http://localhost:3000/orders/634b8ce1caec643b5c8dc59a HTTP/1.1
 GET https://cse-341-project2-week5.onrender.com/clients
 
 ###
-GET https://cse-341-project2-week5.onrender.com/clients/634a4ff6adf6d980eeac4456
+GET https://cse-341-project2-week5.onrender.com/clients/brad.taylor@gmail.com
+
 
 ###
 POST https://cse-341-project2-week5.onrender.com/clients HTTP/1.1
@@ -133,7 +132,7 @@ Content-Type: application/json
     "firstName": "Tim",
     "lastName": "Taylor",
     "email": "timbo@gmail.com",
-    "telephone": "310-555-1123",
+    "telephone": "3105551123",
     "address1": "7723 1st Ave",
     "address2": "",
     "city": "Los Angeles",
@@ -167,7 +166,7 @@ DELETE https://cse-341-project2-week5.onrender.com/clients/634a5232adf6d980eeac4
 GET https://cse-341-project2-week5.onrender.com/inventory
 
 ###
-GET https://cse-341-project2-week5.onrender.com/inventory/634b65126e679c93466afd51
+GET https://cse-341-project2-week5.onrender.com/inventory/954147
 
 ### 
 POST https://cse-341-project2-week5.onrender.com/inventory HTTP/1.1

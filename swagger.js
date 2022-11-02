@@ -7,7 +7,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'Clients API',
-        description: 'This is the list of clients for the store',
+        description: 'This is the list of clients for a movie store',
     },
     host: 'localhost:3000',
     schemas: ['http'],

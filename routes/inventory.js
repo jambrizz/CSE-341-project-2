@@ -13,7 +13,7 @@ const inventoryController = require('../controllers/inventory');
 router.get('/', inventoryController.getAllInventory);
 
 //Get an individual inventory item
-router.get('/:id', inventoryController.getItem);
+router.get('/:sku', inventoryController.getItem);
 
 //Post a new inventory item
 router.post('/', inventoryController.createNewItem);

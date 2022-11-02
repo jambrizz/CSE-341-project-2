@@ -25,11 +25,18 @@ app
     })
     .use('/', require('./routes/index'));
 
-mongodb.initDb((err, db) => {
-    if (err) {
-        console.log('Error connecting to database');
-    } else {
-        app.listen(port);
-        console.log(`Server listening on port ${port}`);
-    }
-});
+const db =  require('./models/index.js');
+db.mongoose
+    .connect(db.uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(() => {
+        app.listen(port, () => {
+            console.log(`Database connected and listening on port ${port}`);
+        });
+    })
+    .catch((err) =>{
+        console.log(err);
+        process.exit();
+    });

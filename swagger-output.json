@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Clients API",
-    "description": "This is the database for a movie store",
+    "description": "This is the list of clients for a movie store",
     "version": "1.0.0"
   },
   "host": "",
@@ -15,9 +15,6 @@
     "/clients/": {
       "get": {
         "description": "This is to retrieve all clients from database",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -66,27 +63,21 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "201": {
             "description": "Created"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     },
-    "/clients/{id}": {
+    "/clients/{email}": {
       "get": {
-        "description": "This is to retrieve a single client from database",
-        "produces": [
-          "application/json"
-        ],
+        "description": "This is to retrieve a single client from the database",
         "parameters": [
           {
-            "name": "id",
+            "name": "email",
             "in": "path",
             "required": true,
             "type": "string"
@@ -97,7 +88,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/clients/{id}": {
       "put": {
         "description": "This is to update a client in the database",
         "parameters": [
@@ -145,11 +138,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -164,8 +157,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -176,13 +169,13 @@
     "/inventory/": {
       "get": {
         "description": "This is to retrieve all inventory from database",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -215,27 +208,21 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "201": {
             "description": "Created"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
     },
-    "/inventory/{id}": {
+    "/inventory/{sku}": {
       "get": {
         "description": "This is to retrieve an single inventory item from database",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
-            "name": "id",
+            "name": "sku",
             "in": "path",
             "required": true,
             "type": "string"
@@ -244,9 +231,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
-      },
+      }
+    },
+    "/inventory/{id}": {
       "put": {
         "description": "This is to update an inventory item in the database",
         "parameters": [
@@ -282,11 +274,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -301,8 +293,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -313,13 +305,13 @@
     "/orders/": {
       "get": {
         "description": "This is to retrieve all orders from database",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -352,14 +344,11 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "201": {
             "description": "Created"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -367,9 +356,6 @@
     "/orders/{id}": {
       "get": {
         "description": "This is to retrieve a single order from the database",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
@@ -381,6 +367,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -419,11 +408,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -438,8 +427,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"

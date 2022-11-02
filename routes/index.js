@@ -2,6 +2,7 @@
 
 //variable to require the express module
 const express = require('express');
+const { append } = require('vary');
 
 //variable to require the router module
 const router = express.Router();
@@ -14,7 +15,6 @@ router.use('/inventory', require('./inventory'));
 router.use('/orders', require('./orders'));
 //route to the swagger documentation
 router.use('/api-docs', require('./docs'));
-
 
 //exports the router module
 module.exports = router;
