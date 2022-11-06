@@ -8,7 +8,7 @@
   "host": "",
   "basePath": "/",
   "schemes": [
-    "http",
+    "http", 
     "https"
   ],
   "paths": {
@@ -434,6 +434,20 @@
             "description": "Internal Server Error"
           }
         }
+      }
+    },
+    "/authorization/login": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/authorization/callback": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
       }
     }
   },
