@@ -24,7 +24,7 @@ const authorizationController ={
                     grant_type: 'authorization_code',
                     client_id: config.clientID,
                     client_secret: config.clientSecret,
-                    redirectUri: config.redirectUri,
+                    redirect_uri: config.redirectUri,
                     scope: 'openid profile email',
                     code: req.query.code,
                 }),
